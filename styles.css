@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.choices {
+  margin-bottom: 20px;
+}
+
+.choice {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.choice[data-choice="piedra"] {
+  background-color: #ff5733;
+  color: white;
+}
+
+.choice[data-choice="papel"] {
+  background-color: #33c1ff;
+  color: white;
+}
+
+.choice[data-choice="tijera"] {
+  background-color: #75ff33;
+  color: white;
+}
+
+.choice:hover {
+  opacity: 0.8;
+}
+
+.result {
+  margin: 20px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}

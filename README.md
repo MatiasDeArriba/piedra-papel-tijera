@@ -22,6 +22,7 @@
 
 ## 📂 Estructura del proyecto
 
+```bash
 piedra-papel-tijera/
 │── index.html
 │── styles.css

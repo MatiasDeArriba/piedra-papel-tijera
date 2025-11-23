@@ -1,22 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Piedra, Papel o Tijera</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Piedra, Papel o Tijera</h1>
-    <div class="choices">
-      <button class="choice" data-choice="piedra">Piedra</button>
-      <button class="choice" data-choice="papel">Papel</button>
-      <button class="choice" data-choice="tijera">Tijera</button>
-    </div>
-    <div class="result">
-      <h2 id="resultText"></h2>
-    </div>
-    <button id="restartButton" class="hidden">Reiniciar</button>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piedra, Papel o Tijera - Matías De Arriba</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Piedra, Papel o Tijera</h1>
+      <p class="subtitle">
+        Elegí tu jugada y enfrentate a la computadora. ¡El mejor de 5 gana la partida!
+      </p>
+    </header>
+
+    <main class="game">
+      <!-- Panel de controles -->
+      <section class="controls">
+        <h2>Elegí tu opción</h2>
+        <div class="choices">
+          <!-- Cada botón tiene un data-choice que usamos en JS -->
+          <button class="choice" data-choice="piedra">
+            <span class="emoji">🪨</span>
+            <span class="label">Piedra</span>
+          </button>
+          <button class="choice" data-choice="papel">
+            <span class="emoji">📄</span>
+            <span class="label">Papel</span>
+          </button>
+          <button class="choice" data-choice="tijera">
+            <span class="emoji">✂️</span>
+            <span class="label">Tijera</span>
+          </button>
+        </div>
+
+        <div class="game-actions">
+          <button id="reset-rounds" class="secondary-btn">
+            Reiniciar marcador
+          </button>
+          <button id="reset-all" class="secondary-btn secondary-btn--danger">
+            Reinicio total
+          </button>
+        </div>
+      </section>
+
+      <!-- Panel de resultados -->
+      <section class="results">
+        <h2>Resultado de la ronda</h2>
+
+        <div class="current-round">
+          <div class="round-choice">
+            <h3>Vos</h3>
+            <p id="player-choice" class="round-choice__value">-</p>
+          </div>
+          <div class="round-choice">
+            <h3>Computadora</h3>
+            <p id="computer-choice" class="round-choice__value">-</p>
+          </div>
+        </div>
+
+        <p id="round-message" class="round-message">
+          Empezá eligiendo Piedra, Papel o Tijera.
+        </p>
+
+        <!-- Marcador general -->
+        <div class="scoreboard">
+          <div class="score">
+            <span class="score__label">Jugador</span>
+            <span id="player-score" class="score__value">0</span>
+          </div>
+          <div class="score">
+            <span class="score__label">Empates</span>
+            <span id="draw-score" class="score__value">0</span>
+          </div>
+          <div class="score">
+            <span class="score__label">PC</span>
+            <span id="computer-score" class="score__value">0</span>
+          </div>
+        </div>
+
+        <!-- Estado de la partida (mejor de 5) -->
+        <div class="match-status">
+          <p>
+            Partida al mejor de <strong>5</strong> rondas.
+            <span id="round-counter">0 / 5</span>
+          </p>
+          <p id="match-message" class="match-message"></p>
+        </div>
+      </section>
+
+      <!-- Historial de jugadas -->
+      <section class="history">
+        <h2>Historial</h2>
+        <ul id="history-list" class="history-list">
+          <!-- Las rondas se insertan acá desde JS -->
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Hecho por <span class="highlight">Matías De Arriba</span> · Practicando
+        JavaScript puro ✨
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

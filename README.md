@@ -2,7 +2,8 @@
   <img src="A_2D_digital_graphic_design_image_serves_as_a_bann.png" width="80%" />
 </p>
 
-# 🪨📄✂️ Piedra · Papel · Tijera
+# 🧱 📄 ✂️ **Piedra · Papel · Tijera**
+
 
 > Juego interactivo desarrollado en **JavaScript**, con interfaz moderna, marcador, historial y lógica completa al mejor de 5 rondas.
 
